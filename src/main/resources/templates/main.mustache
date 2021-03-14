@@ -1,7 +1,17 @@
 <html>
 <body>
-<div>
-    {{some}}
-</div>
+<form method="post">
+    <input type="text" name="name" placeholder="Введите ваше имя">
+    <input type="text" name="email" placeholder="email">
+    <button type="submit">Добавить</button>
+</form>
+<div>Список сообщений</div>
+{{#messages}}
+    <div>
+    <b>{{id}}</b>
+    <span>{{name}}</span>
+    <i>{{email}}</i>
+    </div>
+{{/messages}}
 </body>
 </html>
